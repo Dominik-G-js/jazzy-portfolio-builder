@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code, ArrowRight } from "lucide-react";
+import { Code, ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface ProjectCardProps {
@@ -23,7 +23,7 @@ export const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <Card className="overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-lg bg-white">
-      <div className="aspect-video w-full overflow-hidden bg-blue-100">
+      <div className="aspect-video w-full overflow-hidden bg-amber-100">
         <div
           className="w-full h-full bg-cover bg-center"
           style={{ backgroundImage: `url(${image})` }}
@@ -33,7 +33,7 @@ export const ProjectCard = ({
         <CardTitle className="text-xl">{title}</CardTitle>
         <div className="flex flex-wrap gap-1.5 mt-2">
           {technologies.map((tech) => (
-            <Badge key={tech} variant="secondary" className="bg-blue-100 text-blue-700 hover:bg-blue-200">
+            <Badge key={tech} variant="secondary" className="bg-amber-100 text-amber-700 hover:bg-amber-200">
               {tech}
             </Badge>
           ))}
@@ -47,16 +47,16 @@ export const ProjectCard = ({
           {codeUrl && (
             <Button variant="outline" size="sm" asChild>
               <a href={codeUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-                <Code size={16} />
+                <Github size={16} />
                 <span>Kód</span>
               </a>
             </Button>
           )}
           {demoUrl && (
-            <Button size="sm" asChild className="bg-blue-600 hover:bg-blue-700">
+            <Button size="sm" asChild className="bg-amber-500 hover:bg-amber-600">
               <a href={demoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
                 <span>Demo</span>
-                <ArrowRight size={16} />
+                <ExternalLink size={16} />
               </a>
             </Button>
           )}

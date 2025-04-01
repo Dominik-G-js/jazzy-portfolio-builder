@@ -3,34 +3,30 @@ import { Progress } from "@/components/ui/progress";
 
 const skillCategories = [
   {
-    title: "Frontend",
+    title: "Programování",
     skills: [
-      { name: "JavaScript", level: 95 },
-      { name: "TypeScript", level: 90 },
-      { name: "React", level: 92 },
-      { name: "Vue.js", level: 85 },
-      { name: "HTML5/CSS3", level: 95 },
-      { name: "Tailwind CSS", level: 88 },
+      { name: "JavaScript", level: 90 },
+      { name: "HTML", level: 85 },
+      { name: "CSS", level: 75 },
+      { name: "PHP", level: 40 },
+      { name: "Python", level: 70 },
     ],
   },
   {
-    title: "Backend",
+    title: "Technologie",
     skills: [
-      { name: "Node.js", level: 85 },
-      { name: "Express", level: 82 },
-      { name: "REST API", level: 90 },
-      { name: "MongoDB", level: 78 },
-      { name: "SQL", level: 75 },
+      { name: "Latte", level: 45 },
+      { name: "AJAX", level: 40 },
+      { name: "Nette", level: 50 },
+      { name: "JavaScript", level: 90 },
+      { name: "HTML", level: 85 },
     ],
   },
   {
-    title: "Nástroje a další",
+    title: "Kancelářské aplikace",
     skills: [
-      { name: "Git", level: 92 },
-      { name: "Webpack", level: 80 },
-      { name: "Jest", level: 75 },
-      { name: "Docker", level: 70 },
-      { name: "CI/CD", level: 72 },
+      { name: "Microsoft Excel", level: 85 },
+      { name: "Microsoft Word", level: 85 },
     ],
   },
 ];
@@ -59,7 +55,7 @@ export const Skills = () => {
                       <span className="font-medium text-gray-700">{skill.name}</span>
                       <span className="text-sm text-gray-500">{skill.level}%</span>
                     </div>
-                    <Progress value={skill.level} className="h-2 bg-gray-200" indicatorClassName="bg-blue-600" />
+                    <Progress value={skill.level} className="h-2 bg-gray-200" />
                   </div>
                 ))}
               </div>
